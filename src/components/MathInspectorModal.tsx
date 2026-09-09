@@ -46,12 +46,44 @@ export const MathInspectorModal: React.FC<MathInspectorModalProps> = ({
         }),
       });
 
-      const data = await res.json();
+      let data;
+      if (res.ok) {
+        data = await res.json();
+      } else {
+        // Static hosting fallback (e.g. GitHub Pages without a Node backend)
+        data = {
+          success: true,
+          isOfflineFallback: true,
+          explanation: `### Class-10 Math Insight: ${currentFormula.title}
+
+#### 1. Formula & Meaning
+$$\\large ${currentFormula.latex}$$
+
+#### 2. Class-10 Curriculum Connection: ${currentFormula.class10Chapter}
+In 10th-grade mathematics, we discover how equations and geometric graphs describe the world around us. In modern Artificial Intelligence, algorithms like neural networks, nearest neighbors, and decision boundaries use these exact same arithmetic calculations to classify handwriting, understand speech, and make smart decisions!
+
+#### 3. How AI Uses This Today
+- **Input Features**: Every sensor reading or pixel becomes a number ($x_1, x_2, \\dots$).
+- **Simple Math Operations**: The computer uses basic addition, multiplication, and square roots to measure how close an unknown pattern is to known training examples.
+- **Instant Decision**: Just like drawing a dividing line on graph paper, AI calculates a single number to decide which group the input belongs to!`,
+        };
+      }
       setAiResult(data.explanation);
       setIsOfflineFallback(Boolean(data.isOfflineFallback));
-    } catch (err: any) {
-      console.error(err);
-      setAiResult('Unable to reach server. Please ensure the dev server is active.');
+    } catch {
+      // Fallback for static deployment environments (e.g. GitHub Pages)
+      setAiResult(`### Class-10 Math Insight: ${currentFormula.title}
+
+#### 1. Formula & Meaning
+$$\\large ${currentFormula.latex}$$
+
+#### 2. Class-10 Curriculum Connection: ${currentFormula.class10Chapter}
+In 10th-grade mathematics, we discover how equations and coordinate geometry describe patterns. When an AI classifies images or predicts outcomes, it calculates these exact arithmetic relations millions of times per second!
+
+#### 3. How AI Uses This Today
+- **Input Features**: Every pixel or data measurement is treated as a coordinate $(x, y)$.
+- **Simple Arithmetic**: Distances, products, and inequalities determine the most likely category.`);
+      setIsOfflineFallback(true);
     } finally {
       setAiLoading(false);
     }
