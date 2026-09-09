@@ -12,6 +12,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script>
+      // Fix relative path resolution on GitHub Pages when repository URL lacks a trailing slash
+      if (
+        window.location.hostname.endsWith('github.io') &&
+        !window.location.pathname.endsWith('/') &&
+        !window.location.pathname.split('/').pop().includes('.')
+      ) {
+        window.location.replace(window.location.pathname + '/' + window.location.search + window.location.hash);
+      }
+      // Decode redirected paths from 404.html
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location));
+    </script>
   </head>
   <body class="bg-[#F8FAFC] text-[#0F172A] antialiased selection:bg-sky-200 selection:text-sky-900">
     <div id="root"></div>

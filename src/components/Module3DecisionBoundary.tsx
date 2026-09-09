@@ -236,7 +236,7 @@ export const Module3DecisionBoundary: React.FC<Module3Props> = ({ onOpenInspecto
 
     // 5. Draw Interactive Test Probe (Click / Drag Target)
     const prX = toCanvasX(probePoint.x1, width);
-    const prY = toCanvasY(probePoint.y2 || probePoint.x2, height);
+    const prY = toCanvasY(probePoint.x2, height);
 
     ctx.beginPath();
     ctx.arc(prX, prY, 14, 0, Math.PI * 2);
