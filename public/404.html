@@ -3,21 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting...</title>
+    <title>Mathematics Behind AI - Redirecting...</title>
     <script>
-      // Single Page App redirect for GitHub Pages
-      var pathSegmentsToKeep = 1;
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?p=/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+      // Single Page Redirect for GitHub Pages or custom domains
+      var path = window.location.pathname;
+      var segments = path.split('/').filter(Boolean);
+      // For GitHub Pages (https://<user>.github.io/<repo>/), root is /<repo>/
+      var target = (window.location.hostname.endsWith('github.io') && segments.length > 0)
+        ? '/' + segments[0] + '/'
+        : './';
+      window.location.replace(target);
     </script>
   </head>
-  <body>
-    <p>Redirecting to application...</p>
+  <body style="font-family: system-ui, sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #F8FAFC; color: #0F172A;">
+    <div style="text-align: center;">
+      <p style="font-size: 16px; font-weight: 600;">Redirecting to Mathematics Behind Artificial Intelligence...</p>
+      <a href="./" style="color: #2563EB; text-decoration: underline; font-size: 14px;">Click here if not redirected automatically</a>
+    </div>
   </body>
 </html>
