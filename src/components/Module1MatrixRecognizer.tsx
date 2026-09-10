@@ -241,7 +241,7 @@ export const Module1MatrixRecognizer: React.FC<Module1Props> = ({ onOpenInspecto
         <div>
           <div className="flex items-center gap-2">
             <span className="px-2.5 py-0.5 rounded-md text-xs font-bold bg-blue-100 text-blue-800 border border-blue-200">
-              Module 1 of 4
+              Module 1 of 3
             </span>
             <span className="text-xs text-slate-500 font-medium">Class-10 Number Grids & Pixel Matching</span>
           </div>

@@ -125,7 +125,7 @@ In 10th-grade mathematics, we discover how equations and coordinate geometry des
         const z = paramA * 2 + paramB * 3 + paramC;
         return (
           <div className="space-y-2 text-xs font-mono bg-slate-900 text-sky-200 p-3 rounded-lg border border-slate-700">
-            <div className="text-slate-400 font-sans text-[11px] font-semibold">Live Linear Evaluation (Class-10 Ch-3):</div>
+            <div className="text-slate-400 font-sans text-[11px] font-semibold">Live Linear Evaluation (Class-10 NCTB Ch-6):</div>
             <div>Weights: w₁ = {paramA}, w₂ = {paramB} | Bias: b = {paramC}</div>
             <div>Test Point: (x₁ = 2, x₂ = 3)</div>
             <div className="text-emerald-300 font-bold">

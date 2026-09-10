@@ -346,10 +346,10 @@ export const Module2KNNClustering: React.FC<Module2Props> = ({ onOpenInspector }
         <div>
           <div className="flex items-center gap-2">
             <span className="px-2.5 py-0.5 rounded-md text-xs font-bold bg-blue-100 text-blue-800 border border-blue-200">
-              Module 2 of 4
+              Module 2 of 3
             </span>
             <span className="text-xs text-slate-500 font-medium">
-              Class-10 NCERT Chapter 7: Coordinate Geometry (Distance Formula)
+              Class-10 NCTB Chapter 11: Coordinate Geometry (Distance Formula)
             </span>
           </div>
           <h2 className="text-xl sm:text-2xl font-bold text-navy-950 mt-1">

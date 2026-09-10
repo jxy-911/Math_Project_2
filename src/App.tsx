@@ -152,7 +152,7 @@ export default function App() {
               <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 transition-colors" />
             </h4>
             <p className="text-xs text-slate-500 leading-relaxed">
-              Discover how Coordinate Geometry (Chapter 7), Linear Equations (Chapter 3), and Probability power Artificial Intelligence.
+              Discover how Coordinate Geometry (NCTB Ch-11), Linear Equations (NCTB Ch-6), and Probability (NCTB Ch-14) power Artificial Intelligence.
             </p>
           </div>
 
