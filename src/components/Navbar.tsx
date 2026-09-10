@@ -4,7 +4,6 @@ import {
   Grid3X3,
   Network,
   Binary,
-  GitBranch,
   Volume2,
   VolumeX,
   GraduationCap,
@@ -53,12 +52,6 @@ export const Navbar: React.FC<NavbarProps> = ({
       label: '3. The Dividing Line',
       icon: Binary,
       badge: 'Straight Line',
-    },
-    {
-      id: 'decisiontree',
-      label: '4. 20-Questions Tree',
-      icon: GitBranch,
-      badge: 'Yes/No Rules',
     },
   ];
 

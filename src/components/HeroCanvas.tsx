@@ -4,7 +4,7 @@ import { ArrowRight, Sparkles, BookOpen, Layers } from 'lucide-react';
 import { playClickSound } from '../utils/audio';
 
 interface HeroCanvasProps {
-  onSelectModule: (moduleId: 'matrix' | 'knn' | 'boundary' | 'decisiontree') => void;
+  onSelectModule: (moduleId: 'matrix' | 'knn' | 'boundary') => void;
   onOpenInspector: (formulaId: string) => void;
 }
 
@@ -20,7 +20,6 @@ export const HeroCanvas: React.FC<HeroCanvasProps> = ({
     { id: 'euclidean-distance', label: '2. Distance Formula', tex: 'd = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}' },
     { id: 'hyperplane-equation', label: '3. Dividing Line', tex: 'ax + by + c = 0' },
     { id: 'sigmoid-activation', label: '4. Confidence %', tex: '0\\% \\le P \\le 100\\%' },
-    { id: 'decision-tree-split', label: '5. Yes/No Rules', tex: 'x \\ge \\text{Threshold}' },
   ];
 
   // Rotate formulas smoothly

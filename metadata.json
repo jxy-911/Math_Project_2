@@ -1,6 +1,6 @@
 {
   "name": "Mathematics Behind Artificial Intelligence",
-  "description": "An interactive Class-10 mathematics and AI simulation demonstrating matrix dot products, Euclidean distance KNN, linear decision boundaries, sigmoid activation, and decision trees in a polished Blue Milk glassmorphic aesthetic.",
+  "description": "An interactive Class-10 mathematics and AI simulation demonstrating matrix dot products, Euclidean distance KNN, linear decision boundaries, and sigmoid activation in a polished Blue Milk glassmorphic aesthetic.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

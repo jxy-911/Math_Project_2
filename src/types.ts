@@ -1,6 +1,6 @@
 // Types for the Mathematics Behind AI Simulation
 
-export type ActiveModuleId = 'matrix' | 'knn' | 'boundary' | 'decisiontree';
+export type ActiveModuleId = 'matrix' | 'knn' | 'boundary';
 
 export interface FormulaDetails {
   id: string;
@@ -64,19 +64,4 @@ export interface PerceptronState {
   w1: number;
   w2: number;
   bias: number;
-}
-
-// Module 4: Decision Tree
-export interface TreeNode {
-  id: string;
-  feature?: 'x' | 'y';
-  threshold?: number;
-  isLeaf: boolean;
-  predictedClass?: 'A' | 'B';
-  samplesCount: number;
-  classACount: number;
-  classBCount: number;
-  gini: number;
-  leftChild?: TreeNode;
-  rightChild?: TreeNode;
 }
